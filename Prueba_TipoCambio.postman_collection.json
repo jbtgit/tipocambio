@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "545aa87b-6eff-4bc7-8982-b3ae42764d75",
+		"name": "Prueba_TipoCambio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Lista Tipo de Cambio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3437/api/tipocambio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3437",
+					"path": [
+						"api",
+						"tipocambio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Grabar Tipo de Cambio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idTipoCambio\": 3,\r\n    \"idMonedaOrigen\": \"PES\",\r\n    \"idMonedaDestino\": \"PEN\",\r\n    \"valorTipoCambio\": 4.70\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44394/api/tipocambio",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44394",
+					"path": [
+						"api",
+						"tipocambio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Tipo de Cambio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idTipoCambio\": 1,\r\n    \"idMonedaOrigen\": \"DOL\",\r\n    \"idMonedaDestino\": \"PEN\",\r\n    \"valorTipoCambio\": 3.71\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3437/api/tipocambio/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3437",
+					"path": [
+						"api",
+						"tipocambio",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Conversion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44394/api/conversion/DOL/PEN/1050",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44394",
+					"path": [
+						"api",
+						"conversion",
+						"DOL",
+						"PEN",
+						"1050"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
